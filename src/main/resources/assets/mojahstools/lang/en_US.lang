@@ -1,0 +1,10 @@
+item.mojahstools:emeryPaper.name=Emery Paper
+item.mojahstools:polishedStone.name=Polished Stone
+
+item.mojahstools:stonearmorBoots.name=Stone Boots
+item.mojahstools:stonearmorChestplate.name=Stone Chestplate
+item.mojahstools:stonearmorHelmet.name=Stone Helmet
+item.mojahstools:stonearmorLeggings.name=Stone Leggings
+
+
+itemGroup.mojahstools=Mojah's Tools
