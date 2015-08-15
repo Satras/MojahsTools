@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import de.mojah.mojahstools.handler.ConfigurationHandler;
+import de.mojah.mojahstools.handler.CraftingEventHandler;
 import de.mojah.mojahstools.init.ModArmor;
 import de.mojah.mojahstools.init.ModBlocks;
 import de.mojah.mojahstools.init.ModItems;
@@ -35,6 +36,9 @@ public class MojahsTools
 
         // so the ConfigHandler listens to the Event-bus
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        // CraftingEventHandler
+        //FMLCommonHandler.instance().bus().register(new CraftingEventHandler());
 
         // Blocks
         ModItems.init();

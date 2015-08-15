@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
@@ -17,7 +18,11 @@ public class Recipes {
        //GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.flag), new ItemStack(ModItems.mapleLeaf), new ItemStack(ModItems.mapleLeaf)));
 
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.emeryPaper), "sand", new ItemStack(Items.paper)));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.polishedStone,2), "cobblestone", new ItemStack(ModItems.emeryPaper.setContainerItem(ModItems.emeryPaper))));
+
+        // ItemStack(Item, count, OreDictionary.WILDCARD_VALUE)
+        // OreDictionary.WILDCARD_VALUE any Damage-Value!
+        // http://www.minecraftforge.net/forum/index.php?topic=6944.0
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.polishedStone, 2), "cobblestone", new ItemStack(ModItems.emeryPaper.setContainerItem(ModItems.emeryPaper), 1, OreDictionary.WILDCARD_VALUE)));
 
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.cobblestone), new ItemStack(ModItems.polishedStone), new ItemStack(ModItems.polishedStone),new ItemStack(ModItems.polishedStone) ,new ItemStack(ModItems.polishedStone)));
 

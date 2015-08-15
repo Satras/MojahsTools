@@ -9,15 +9,26 @@ public class ItemEmeryPaper extends ItemMT{
     public ItemEmeryPaper() {
         super();
         setUnlocalizedName("emeryPaper");
-        isDamageable();
-        setMaxDamage(10);
+        setMaxDamage(6 - 1); // 6 Recipes
+        maxStackSize = 1;
+        setNoRepair();
     }
+
+
 
     @Override
     public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack)
     {
-        //setDamage(stack, getDamage(stack)+1);
-        //showDurabilityBar(stack);
         return false;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack) {
+
+        // Damaging Item on craft
+        // http://www.minecraftforge.net/forum/index.php?topic=3203.0
+
+        itemStack.setItemDamage(itemStack.getItemDamage() + 1);
+        return itemStack;
     }
 }

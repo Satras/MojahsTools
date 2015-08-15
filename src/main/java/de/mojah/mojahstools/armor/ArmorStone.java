@@ -178,6 +178,5 @@ public class ArmorStone extends ArmorMT {
         //LogHelper.info("DamageReduce : "+totalReduce+"("+cobTot+"); Damage : "+stack.getItemDamage() +" <> "+damage);
         stack.setItemDamage(MathHelper.abs_int(totalReduce - stack.getItemDamage() - damage));
         stack.damageItem(0, entity);
-
     }
 }
